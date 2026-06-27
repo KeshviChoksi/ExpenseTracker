@@ -1,0 +1,28 @@
+# Environment variables — never commit this
+.env
+
+# Node modules — install with npm install
+node_modules/
+
+# Mac system files
+.DS_Store
+.DS_Store?
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build outputs
+dist/
+build/
+
+# Editor folders
+.vscode/
+.idea/

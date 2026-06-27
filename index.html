@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark px-4">
+    <span class="navbar-brand fw-bold"> Expense Tracker</span>
+    <span id="total-display" class="text-success fw-bold fs-5">Total: $0.00</span>
+  </nav>
+
+  <div class="container mt-4">
+
+    <!-- Add Expense Form -->
+    <div class="card form-card mb-4">
+      <div class="card-body">
+        <h5 class="card-title mb-3">Add New Expense</h5>
+        <div class="row g-2">
+          <div class="col-12 col-md-4">
+            <input
+              type="text"
+              id="title"
+              class="form-control"
+              placeholder="Expense title e.g. Grocery"
+            />
+          </div>
+          <div class="col-6 col-md-2">
+            <input
+              type="number"
+              id="amount"
+              class="form-control"
+              placeholder="Amount $"
+            />
+          </div>
+          <div class="col-6 col-md-2">
+            <select id="category" class="form-select">
+              <option value="">Category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Health">Health</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-2">
+            <input type="date" id="date" class="form-control" />
+          </div>
+          <div class="col-6 col-md-2">
+            <button
+              id="add-btn"
+              class="btn btn-success w-100"
+              onclick="addExpense()"
+            >
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="d-flex gap-2 flex-wrap mb-3" id="filter-bar">
+      <button class="btn btn-sm btn-outline-light active-filter" onclick="filterBy('All')">All</button>
+      <button class="btn btn-sm btn-outline-warning" onclick="filterBy('Food')"> Food</button>
+      <button class="btn btn-sm btn-outline-info" onclick="filterBy('Transport')"> Transport</button>
+      <button class="btn btn-sm btn-outline-primary" onclick="filterBy('Shopping')"> Shopping</button>
+      <button class="btn btn-sm btn-outline-success" onclick="filterBy('Entertainment')"> Entertainment</button>
+      <button class="btn btn-sm btn-outline-danger" onclick="filterBy('Health')"> Health</button>
+      <button class="btn btn-sm btn-outline-secondary" onclick="filterBy('Other')"> Other</button>
+    </div>
+
+    <!-- Expenses Grid -->
+    <div id="expenses" class="row"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

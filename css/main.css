@@ -1,0 +1,75 @@
+body {
+  background-color: #0f1117;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-card {
+  background-color: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+}
+
+.expense-card {
+  background-color: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expense-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.amount-badge {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #48bb78;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #fc8181;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #f56565;
+}
+
+.active-filter {
+  background-color: #4a5568 !important;
+  color: white !important;
+}
+
+.form-control,
+.form-select {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.2);
+}
+
+.form-control::placeholder {
+  color: #718096;
+}
+
+.form-select option {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.navbar {
+  border-bottom: 1px solid #2d3748;
+}
